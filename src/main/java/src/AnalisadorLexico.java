@@ -62,11 +62,8 @@ class AnalisadorLexico {
   private static final int [] ZZ_CMAP_BLOCKS = zzUnpackcmap_blocks();
 
   private static final String ZZ_CMAP_BLOCKS_PACKED_0 =
-    "\11\0\2\1\2\2\1\1\34\0\1\3\1\4\1\0"+
-    "\1\5\1\0\1\6\1\7\11\10\7\0\32\11\4\0"+
-    "\1\11\1\0\4\11\1\12\1\13\1\11\1\14\1\15"+
-    "\4\11\1\16\5\11\1\17\6\11\1\0\1\20\10\0"+
-    "\1\2\u01a2\0\2\2\326\0\u0100\2";
+    "\12\0\4\1\42\0\12\2\47\0\32\3\1\0\1\3"+
+    "\10\0\1\1\u01a2\0\2\1\326\0\u0100\1";
 
   private static int [] zzUnpackcmap_blocks() {
     int [] result = new int[1024];
@@ -93,11 +90,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_ACTION = zzUnpackAction();
 
   private static final String ZZ_ACTION_PACKED_0 =
-    "\1\0\1\1\1\2\1\3\1\4\1\5\1\6\2\7"+
-    "\3\10\1\2\1\11\2\10";
+    "\1\0\1\1\1\2";
 
   private static int [] zzUnpackAction() {
-    int [] result = new int[16];
+    int [] result = new int[3];
     int offset = 0;
     offset = zzUnpackAction(ZZ_ACTION_PACKED_0, offset, result);
     return result;
@@ -122,11 +118,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_ROWMAP = zzUnpackRowMap();
 
   private static final String ZZ_ROWMAP_PACKED_0 =
-    "\0\0\0\21\0\21\0\21\0\21\0\21\0\21\0\21"+
-    "\0\42\0\63\0\104\0\125\0\63\0\63\0\146\0\167";
+    "\0\0\0\4\0\10";
 
   private static int [] zzUnpackRowMap() {
-    int [] result = new int[16];
+    int [] result = new int[3];
     int offset = 0;
     offset = zzUnpackRowMap(ZZ_ROWMAP_PACKED_0, offset, result);
     return result;
@@ -149,14 +144,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_TRANS = zzUnpackTrans();
 
   private static final String ZZ_TRANS_PACKED_0 =
-    "\1\2\1\3\1\0\1\4\1\5\1\6\1\7\1\10"+
-    "\1\11\4\12\1\13\1\12\1\14\1\15\30\0\2\11"+
-    "\17\0\12\12\7\0\4\12\1\16\5\12\7\0\5\12"+
-    "\1\17\4\12\7\0\3\12\1\20\6\12\7\0\7\12"+
-    "\1\16\2\12";
+    "\1\2\1\0\1\2\1\3\6\0\2\3";
 
   private static int [] zzUnpackTrans() {
-    int [] result = new int[136];
+    int [] result = new int[12];
     int offset = 0;
     offset = zzUnpackTrans(ZZ_TRANS_PACKED_0, offset, result);
     return result;
@@ -199,10 +190,10 @@ class AnalisadorLexico {
   private static final int [] ZZ_ATTRIBUTE = zzUnpackAttribute();
 
   private static final String ZZ_ATTRIBUTE_PACKED_0 =
-    "\1\0\7\11\10\1";
+    "\1\0\1\11\1\1";
 
   private static int [] zzUnpackAttribute() {
-    int [] result = new int[16];
+    int [] result = new int[3];
     int offset = 0;
     offset = zzUnpackAttribute(ZZ_ATTRIBUTE_PACKED_0, offset, result);
     return result;
@@ -283,7 +274,6 @@ class AnalisadorLexico {
 
   /* user code: */
 	private void imprimir(String descricao, String lexema){
-
 		System.out.println(lexema + "-" + descricao);
 	}
 
@@ -627,47 +617,12 @@ class AnalisadorLexico {
 //            { throw new RuntimeException("Caractere invalido" + yytext());
 //            }
             // fall through
-          case 10: break;
+          case 3: break;
           case 2:
-            { imprimir("Espaco em branco ", yytext());
-            }
-            // fall through
-          case 11: break;
-          case 3:
-            { imprimir("Operador de multiplicacao", yytext());
-            }
-            // fall through
-          case 12: break;
-          case 4:
-            { imprimir("Operador de soma ", yytext());
-            }
-            // fall through
-          case 13: break;
-          case 5:
-            { imprimir("Operador de subtracao", yytext());
-            }
-            // fall through
-          case 14: break;
-          case 6:
-            { imprimir("Operador de divisao", yytext());
-            }
-            // fall through
-          case 15: break;
-          case 7:
-            { imprimir("Numero inteiro ", yytext());
-            }
-            // fall through
-          case 16: break;
-          case 8:
             { imprimir("Identificador ", yytext());
             }
             // fall through
-          case 17: break;
-          case 9:
-            { imprimir("Palavra reservada", yytext());
-            }
-            // fall through
-          case 18: break;
+          case 4: break;
           default:
             zzScanError(ZZ_NO_MATCH);
         }
